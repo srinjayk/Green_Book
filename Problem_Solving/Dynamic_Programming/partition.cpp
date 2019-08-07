@@ -23,7 +23,7 @@ bool isPartition(vector<int> A){
 			isPartitionsum[i][j] = isPartitionsum[i][j-1];
 			//if the sum is greater
 			if(i>=A[j-1]){
-				isPartitionsum[i][j]=isPartitionsum[i][j]||isPartitionsum[i-arr[j-1]][j-1];
+				isPartitionsum[i][j]=isPartitionsum[i][j-1]||isPartitionsum[i-arr[j-1]][j-1];
 			}
 		}
 	}
